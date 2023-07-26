@@ -1,0 +1,17 @@
+
+<h1>Animal Blogs </h1> 
+    
+    <% @blogapps.each do |blogapp| %>
+    <%# debugger %>
+	
+		<h3><%= blogapp.title %></h3>
+		<h3><%= blogapp.body %></h3>
+        <h3> Author_id :  <%= blogapp.author_id %></h3>
+		<h3><%= link_to "View", "/blogs/#{blogapp.id}"%></h3>
+					
+    <% end %>
+
+
+
+  
+
