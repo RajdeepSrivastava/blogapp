@@ -1,17 +1,15 @@
 
-<h1>Animal Blogs </h1> 
-    
-    <% @blogapps.each do |blogapp| %>
-    <%# debugger %>
-	
-		<h3><%= blogapp.title %></h3>
-		<h3><%= blogapp.body %></h3>
-        <h3> Author_id :  <%= blogapp.author_id %></h3>
-		<h3><%= link_to "View", "/blogapps/#{blogapp.id}"%></h3>
-					
-    <% end %>
+<h1 class="blog-title">Animal Blogs</h1>
 
+<% @blogapps.each do |blogapp| %>
+  <div class="blog-post">
+    <h3 class="blog-post-title"><%= blogapp.title %></h3>
+    <p class="blog-post-body"><%= blogapp.body %></p>
+    <p class="blog-post-author">Author ID: <%= blogapp.author_id %></p>
+    <h3><%= link_to "View", "/blogapps/#{blogapp.id}" %> | <%= link_to "Delete", "/blogapps/delete/#{blogapp.id}" %> </h3>
 
+  </div>
+<% end %>
 
-  
+<%= link_to "My Account", "/users" %>
 

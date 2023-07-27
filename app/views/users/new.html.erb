@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag 'users' %>
+
+<h1>Create Account</h1>
+
+<%= form_tag("/users", method: "get") do %>
+  <label>Email:</label>
+  <%= email_field_tag :email %>
+
+  <label>Password:</label>
+  <%= password_field_tag :password %>
+
+  <label> Retype_Password:</label>
+  <%= password_field_tag :retype_password %>
+
+
+  <%= submit_tag "Submit" %>
+<% end %>

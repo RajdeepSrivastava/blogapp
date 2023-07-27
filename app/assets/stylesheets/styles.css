@@ -1,0 +1,63 @@
+/* app/assets/stylesheets/style.css */
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header styles */
+  h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  /* Blog post styles */
+  .blog-post {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-post h3 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .blog-post p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Links styles */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* "Create New Blog" link */
+  .create-blog-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .create-blog-link:hover {
+    background-color: #0056b3;
+  }
+  

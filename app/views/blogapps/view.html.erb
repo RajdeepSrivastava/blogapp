@@ -1,3 +1,30 @@
+<style>
+  /* Add your custom CSS styles here */
+  h1 {
+    color: #333;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  h3 {
+    color: #666;
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
 <h1><%= @blogapp.title  %></h1>
 
 <% if @blogapp.title == 'Lion: The King of the Jungle' %>
@@ -44,7 +71,7 @@ Dolphins exhibit exceptional problem-solving skills, displaying intelligence com
 5. Emotional Intelligence: Empathy in the Waves
 
 Dolphins display emotional intelligence, showing empathy and compassion toward injured or distressed pod members. They often come to the aid of injured individuals, offering support and protection.</p>
-<% elsif @blogapp.title == "Elephant: The Gentle Giant" %>
+<% elsif @blogapp.title == @blogapp.title%>
   <p>In the vast oceans and seas, where the horizon stretches beyond sight, lives the enigmatic and intelligent dolphin (family Delphinidae). Often referred to as the "smiling angels of the sea," dolphins are highly evolved marine mammals, renowned for their playful nature and exceptional cognitive abilities.
 <br>
 1. Playful Personalities: The Joy of the Waves
@@ -66,4 +93,6 @@ Dolphins exhibit exceptional problem-solving skills, displaying intelligence com
 5. Emotional Intelligence: Empathy in the Waves
 
 Dolphins display emotional intelligence, showing empathy and compassion toward injured or distressed pod members. They often come to the aid of injured individuals, offering support and protection.</p>
-<% end %>
+<% end%>
+
+<%=params[:title]%>
