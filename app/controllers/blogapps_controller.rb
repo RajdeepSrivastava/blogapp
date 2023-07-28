@@ -15,11 +15,11 @@ class BlogappsController < ApplicationController
         
         @blogapp = Blogapp.new(blogapp_params)
             if @blogapp.save
-                flash[:success] = "Great! your Blog is Created"
+                flash[:notice] = "Great! your Blog is Created"
                 redirect_to "/blogapps"
             else
-                #flash.now(:error) = "Oops!, There is some Error"
-                render :new , status: :unaccessable_entity
+                flash[:alert] = "Oops!, There is some Error"
+                render :new , status: :unprocessable_entity
             end
         # Blogapp.create(title:params[:title], body:params[:body], author_id:params[:author_id])
 

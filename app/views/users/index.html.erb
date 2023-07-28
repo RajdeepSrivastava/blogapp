@@ -1,9 +1,8 @@
-
 <%= stylesheet_link_tag 'users' %>
 
 <h1>Account Login</h1>
 
-<%= form_tag("/users", method: "get") do %>
+<%= form_tag("/users/logincheck", method: "post") do %>
   <label>Email:</label>
   <%= email_field_tag :email %>
 

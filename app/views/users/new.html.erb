@@ -2,16 +2,17 @@
 
 <h1>Create Account</h1>
 
-<%= form_tag("/users", method: "get") do %>
+<%= form_tag("/users/create", method: "post") do %>
   <label>Email:</label>
-  <%= email_field_tag :email %>
+  <%= email_field_tag(:"user[email]") %>
 
   <label>Password:</label>
-  <%= password_field_tag :password %>
+  <%= password_field_tag(:"user[password]") %>
 
-  <label> Retype_Password:</label>
-  <%= password_field_tag :retype_password %>
-
+  <label>Retype Password:</label>
+  <%= password_field_tag(:"user[password_confirmation]") %>
 
   <%= submit_tag "Submit" %>
 <% end %>
+
+<%= link_to "Already Have an Account", "/", class: "new-user-link" %>
