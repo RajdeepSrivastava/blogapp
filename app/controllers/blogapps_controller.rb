@@ -8,6 +8,8 @@ class BlogappsController < ApplicationController
 
     def view
         @blogapp = Blogapp.find(params[:id])
+        @blogapp.increment!(:views)
+        render :view
     end
 
     def create
@@ -33,7 +35,7 @@ class BlogappsController < ApplicationController
     
     def update
         @blogapp = Blogapp.find(params[:id])
-        @blogapp.update(title:params[:title], body:params[:body], author_id:params[:author_id])
+        @blogapp.update(title:params[:title], body:params[:body], author_id:params[:views])
         redirect_to "blogapp"
     end
 
@@ -47,7 +49,7 @@ class BlogappsController < ApplicationController
 
    
     def blogapp_params
-        params.require(:blogapp).permit(:title, :body, :author_id)
+        params.require(:blogapp).permit(:title, :body, :views)
     end
       
 end

@@ -5,7 +5,7 @@
   <div class="blog-post">
     <h3 class="blog-post-title"><%= blogapp.title %></h3>
     <p class="blog-post-body"><%= blogapp.body %></p>
-    <p class="blog-post-author">Author ID: <%= blogapp.author_id %></p>
+    <p class="blog-post-views">Views: <%= blogapp.views %></p>
     <h3><%= link_to "View", "/blogapps/#{blogapp.id}" %> | <%= link_to "Delete", "/blogapps/delete/#{blogapp.id}" %> </h3>
 
   </div>

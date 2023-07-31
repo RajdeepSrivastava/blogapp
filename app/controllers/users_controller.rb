@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     redirect_to '/blogapps', notice: "Account is ceated Successfully"
     else
       flash[:error] = "Invalid Username Or Password"
-      redirect_to "/blogapps/new"
+      redirect_to "/"
     end
   end
 
@@ -44,14 +44,6 @@ class UsersController < ApplicationController
       render :forgot_password
     end
   end
-
-  
-        
-
-
-
-
-
 
   private
 
